@@ -18,7 +18,6 @@ class SmurfForm extends Component {
     const id = this.props.match.params.id;
     Axios.get(`http://localhost:3333/smurfs/`)
       .then(response => {
-        console.log('send help: ', response.data);
         const smurf = response.data.find(i => String(i.id) === id);
         this.setState(smurf);
       })

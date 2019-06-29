@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   margin: 0 auto;
 }
 .Smurfs h1 {
@@ -16,9 +16,9 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   width: 700px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .Smurf .form-btn {
@@ -29,29 +29,31 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 .smurf-img {
-  height: 125px;
-  width: 125px;
+  height: 200px;
+  width: 200px;
   margin-right: 2rem;
+  border-radius: 50%;
 }
 
 .Smurf h3 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  margin: 0;
 }
 
 .Smurf p {
-  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 .SmurfForm {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 .form {
@@ -93,4 +95,5 @@ input::placeholder {
 
 .card-link {
   text-decoration: none;
+  color: #3c68ae;
 }

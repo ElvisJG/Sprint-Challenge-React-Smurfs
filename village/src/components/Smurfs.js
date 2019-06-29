@@ -19,7 +19,9 @@ export default props => {
                 <img src={smurf.image} alt={smurf.name} className='smurf-img' />
                 <div className='text-content'>
                   <h3>{smurf.name}</h3>
-                  <strong>{smurf.height}cm tall</strong>
+                  <p>
+                    <strong>{smurf.height}cm tall</strong>
+                  </p>
                   <p>{smurf.age} smurf years old</p>
                 </div>
               </div>
