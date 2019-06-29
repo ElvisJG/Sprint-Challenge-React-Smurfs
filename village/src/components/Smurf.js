@@ -19,7 +19,7 @@ export default props => {
         <p>{smurf.age} smurf years old</p>
       </div>
       <Link to={`/edit/${smurf.id}`} className='card-link'>
-        <button className='form-btn'>Edit Smurf</button>
+        <button className='form-btn-alt'>Edit Smurf</button>
       </Link>
     </div>
   );
