@@ -6,6 +6,8 @@ import './App.css';
 import Nav from './components/Nav/Nav';
 import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
+import Smurf from './components/Smurf';
+import Edit from './components/Edit';
 import logo from './assets/smurfs_logo.png';
 
 class App extends Component {
@@ -36,6 +38,8 @@ class App extends Component {
   };
 
   render() {
+    const { smurfs } = this.state;
+
     return (
       <div className='App'>
         <Nav />
@@ -44,7 +48,13 @@ class App extends Component {
         <Route
           exact
           path='/'
-          render={props => <Smurfs {...props} smurfs={this.state.smurfs} />}
+          render={props => <Smurfs {...props} smurfs={smurfs} />}
+        />
+
+        <Route
+          exact
+          path='/edit/:id'
+          render={props => <Edit {...props} updateSmurfs={this.updateSmurfs} />}
         />
 
         <Route

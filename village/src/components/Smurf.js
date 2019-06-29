@@ -1,24 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './smurf.css';
 
-const Smurf = props => {
+export default props => {
   return (
-    <div className='Smurf'>
-      <img src={props.image} alt={props.name} className='smurf-img' />
-      <div className='text-content'>
-        <h3>{props.name}</h3>
-        <strong>{props.height}cm tall</strong>
-        <p>{props.age} smurf years old</p>
+    <Link to={`/edit/${props.id}`} className='card-link'>
+      <div className='Smurf'>
+        <img src={props.image} alt={props.name} className='smurf-img' />
+        <div className='text-content'>
+          <h3>{props.name}</h3>
+          <strong>{props.height}cm tall</strong>
+          <p>{props.age} smurf years old</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
-
-Smurf.defaultProps = {
-  name: '',
-  height: '',
-  age: ''
-};
-
-export default Smurf;
