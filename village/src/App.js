@@ -59,6 +59,12 @@ class App extends Component {
 
         <Route
           exact
+          path='/smurf/:id'
+          render={props => <Smurf {...props} smurfs={smurfs} />}
+        />
+
+        <Route
+          exact
           path='/smurf-form'
           render={props => (
             <SmurfForm {...props} updateSmurfs={this.updateSmurfs} />

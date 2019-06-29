@@ -84,12 +84,12 @@ class SmurfForm extends Component {
       <div className='SmurfForm'>
         <form onSubmit={this.updateSmurf} className='form'>
           <input
+            type='text'
             onChange={this.handleInputChange}
             placeholder='name'
             value={name}
             name='name'
             className='smurf-form-input'
-            type='text'
           />
           <input
             onChange={this.handleInputChange}
@@ -116,7 +116,7 @@ class SmurfForm extends Component {
             type='text'
           />
           <button type='submit' className='form-btn'>
-            Edit Smurf
+            Submit Edit
           </button>
           <button onClick={this.deleteSmurf} className='form-btn'>
             Delete Smurf?!

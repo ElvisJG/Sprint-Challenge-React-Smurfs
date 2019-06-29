@@ -21,6 +21,10 @@
   margin-bottom: 2rem;
 }
 
+.Smurf .form-btn {
+  margin: 1rem;
+}
+
 .text-content {
   display: flex;
   flex-direction: column;

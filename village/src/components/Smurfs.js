@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Smurf from './Smurf';
 import './smurf.css';
 
 export default props => {
@@ -10,14 +10,20 @@ export default props => {
       <ul>
         {props.smurfs.map(smurf => {
           return (
-            <Smurf
-              name={smurf.name}
-              id={smurf.id}
-              age={smurf.age}
-              height={smurf.height}
+            <Link
+              to={`/smurf/${smurf.id}`}
+              className='card-link'
               key={smurf.id}
-              image={smurf.image}
-            />
+            >
+              <div className='Smurf'>
+                <img src={smurf.image} alt={smurf.name} className='smurf-img' />
+                <div className='text-content'>
+                  <h3>{smurf.name}</h3>
+                  <strong>{smurf.height}cm tall</strong>
+                  <p>{smurf.age} smurf years old</p>
+                </div>
+              </div>
+            </Link>
           );
         })}
       </ul>
