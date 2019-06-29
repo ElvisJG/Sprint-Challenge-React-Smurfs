@@ -1,0 +1,23 @@
+.Smurfs {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.Smurfs h1 {
+  color: #3c68ae;
+}
+
+.Smurf {
+  text-align: center;
+}
+
+.Smurf h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.Smurf p {
+  margin-top: 0.5rem;
+}

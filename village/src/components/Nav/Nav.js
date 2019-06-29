@@ -1,15 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import './nav.css';
+
 export default function Nav() {
   return (
-    <div className='nav'>
+    <div className='nav-links'>
       <nav>
         <NavLink exact to='/'>
           Home
         </NavLink>
         <NavLink exact to='/smurf-form'>
-          Form
+          Add Smurf
         </NavLink>
       </nav>
     </div>

@@ -6,6 +6,7 @@ import './App.css';
 import Nav from './components/Nav/Nav';
 import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
+import logo from './assets/smurfs_logo.png';
 
 class App extends Component {
   constructor(props) {
@@ -38,6 +39,7 @@ class App extends Component {
     return (
       <div className='App'>
         <Nav />
+        <img src={logo} alt='logo' className='logo' />
 
         <Route
           exact
