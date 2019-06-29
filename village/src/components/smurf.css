@@ -4,13 +4,29 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  margin: 0 auto;
 }
 .Smurfs h1 {
   color: #3c68ae;
+  margin: 0 auto;
 }
 
 .Smurf {
+  margin: 0 auto;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 4px solid #3c68ae;
+  border-radius: 8px;
+  width: 700px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
 .Smurf h3 {

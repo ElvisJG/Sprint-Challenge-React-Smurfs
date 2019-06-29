@@ -18,7 +18,9 @@ let smurfs = [
     id: 0,
     name: 'Brainey Smurf',
     age: 200,
-    height: '8cm'
+    height: '8cm',
+    image:
+      'https://vignette.wikia.nocookie.net/smurfs/images/e/e8/Brainy.jpg/revision/latest?cb=20090609234412'
   }
 ];
 server.get('/smurfs', (req, res) => {
