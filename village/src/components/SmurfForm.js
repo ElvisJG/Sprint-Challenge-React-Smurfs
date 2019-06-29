@@ -17,8 +17,8 @@ class SmurfForm extends Component {
   addSmurf = event => {
     event.preventDefault();
     // add code to create the smurf using the api
-    const { name, age, height } = this.state;
-    const payload = { name, age, height };
+    const { name, age, height, image } = this.state;
+    const payload = { name, age, height, image };
     Axios.post('http://localhost:3333/smurfs', payload)
       .then(res => {
         this.props.updateSmurfs(res.data);
@@ -74,7 +74,7 @@ class SmurfForm extends Component {
             value={image}
             name='image'
             className='smurf-form-input'
-            type='url'
+            type='text'
           />
           <button type='submit' className='form-btn'>
             Add to the village

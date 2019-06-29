@@ -74,6 +74,10 @@ input {
   color: white;
 }
 
+input::placeholder {
+  color: rgb(255, 255, 255, 0.5);
+}
+
 .form-btn {
   line-height: 1.5rem;
   background: #3c68ae;

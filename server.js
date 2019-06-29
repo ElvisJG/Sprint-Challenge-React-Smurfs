@@ -45,9 +45,9 @@ server.get('/smurfs', (req, res) => {
 let smurfId = 3;
 
 server.post('/smurfs', (req, res) => {
-  const { name, age, height } = req.body;
-  const newSmurf = { name, age, height, id: smurfId };
-  if (!name || !age || !height) {
+  const { name, age, height, image } = req.body;
+  const newSmurf = { name, age, height, image, id: smurfId };
+  if (!name || !age || !height || !image) {
     return sendUserError(
       'Ya gone did smurfed! Name/Age/Height are all required to create a smurf in the smurf DB.',
       res
@@ -70,7 +70,7 @@ server.post('/smurfs', (req, res) => {
 
 server.put('/smurfs/:id', (req, res) => {
   const { id } = req.params;
-  const { name, age, height } = req.body;
+  const { name, age, height, image } = req.body;
   const findSmurfById = smurf => {
     return smurf.id == id;
   };
@@ -81,6 +81,7 @@ server.put('/smurfs/:id', (req, res) => {
     if (name) foundSmurf.name = name;
     if (age) foundSmurf.age = age;
     if (height) foundSmurf.height = height;
+    if (image) foundSmurf.image = image;
     res.json(smurfs);
   }
 });
