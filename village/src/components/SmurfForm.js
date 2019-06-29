@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 
+import './smurf.css';
+
 class SmurfForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       name: '',
       age: '',
-      height: ''
+      height: '',
+      image: ''
     };
   }
 
@@ -22,7 +25,8 @@ class SmurfForm extends Component {
         this.setState({
           name: '',
           age: '',
-          height: ''
+          height: '',
+          image: ''
         });
         this.props.history.push('/');
       })
@@ -36,29 +40,45 @@ class SmurfForm extends Component {
   };
 
   render() {
-    const { name, age, height } = this.state;
+    const { name, age, height, image } = this.state;
     return (
       <div className='SmurfForm'>
-        <form onSubmit={this.addSmurf}>
+        <form onSubmit={this.addSmurf} className='form'>
           <input
             onChange={this.handleInputChange}
             placeholder='name'
             value={name}
             name='name'
+            className='smurf-form-input'
+            type='text'
           />
           <input
             onChange={this.handleInputChange}
             placeholder='age'
             value={age}
             name='age'
+            className='smurf-form-input'
+            type='number'
           />
           <input
             onChange={this.handleInputChange}
             placeholder='height'
             value={height}
             name='height'
+            className='smurf-form-input'
+            type='number'
           />
-          <button type='submit'>Add to the village</button>
+          <input
+            onChange={this.handleInputChange}
+            placeholder='image URL'
+            value={image}
+            name='image'
+            className='smurf-form-input'
+            type='url'
+          />
+          <button type='submit' className='form-btn'>
+            Add to the village
+          </button>
         </form>
       </div>
     );

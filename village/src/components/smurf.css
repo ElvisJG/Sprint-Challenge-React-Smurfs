@@ -17,9 +17,8 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  border: 4px solid #3c68ae;
-  border-radius: 8px;
   width: 700px;
+  margin-bottom: 2rem;
 }
 
 .text-content {
@@ -29,6 +28,12 @@
   align-content: center;
 }
 
+.smurf-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 2rem;
+}
+
 .Smurf h3 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
@@ -36,4 +41,44 @@
 
 .Smurf p {
   margin-top: 0.5rem;
+}
+
+.SmurfForm {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.smurf-form-input {
+  margin: 1rem 0;
+  height: 50px;
+  line-height: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 2rem;
+  box-sizing: border-box;
+  border: none;
+  background-color: #62cdfd;
+  font-weight: bold;
+  color: white;
+}
+
+.form-btn {
+  line-height: 1.5rem;
+  background: #3c68ae;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }

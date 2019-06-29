@@ -18,15 +18,31 @@ let smurfs = [
     id: 0,
     name: 'Brainey Smurf',
     age: 200,
-    height: '8cm',
+    height: '8',
     image:
       'https://vignette.wikia.nocookie.net/smurfs/images/e/e8/Brainy.jpg/revision/latest?cb=20090609234412'
+  },
+  {
+    id: 1,
+    name: 'Papa Smurf',
+    age: 546,
+    height: '10',
+    image:
+      'https://vignette.wikia.nocookie.net/smurfs/images/9/96/Papa_Smurf_Cartoon.png/revision/latest/scale-to-width-down/200?cb=20111013135841'
+  },
+  {
+    id: 2,
+    name: 'Smurfette',
+    age: '100',
+    height: '6',
+    image:
+      'https://vignette.wikia.nocookie.net/smurfs/images/b/b7/Smurfette_old.jpg/revision/latest?cb=20090610000054'
   }
 ];
 server.get('/smurfs', (req, res) => {
   res.json(smurfs);
 });
-let smurfId = 1;
+let smurfId = 3;
 
 server.post('/smurfs', (req, res) => {
   const { name, age, height } = req.body;
