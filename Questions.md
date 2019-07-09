@@ -24,4 +24,4 @@ _D_ --Axios.delete
 
 - [ ] Mention three tools we can use to make AJAX requests.
 
-Axios, AJAX, JS Promises
+Axios, Apollo, JS Promises
