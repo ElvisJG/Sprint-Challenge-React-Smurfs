@@ -1,32 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Smurf from './Smurf';
+import './smurf.css';
 
-class Smurfs extends Component {
-  render() {
-    return (
-      <div className="Smurfs">
-        <h1>Smurf Village</h1>
-        <ul>
-          {this.props.smurfs.map(smurf => {
-            return (
-              <Smurf
-                name={smurf.name}
-                id={smurf.id}
-                age={smurf.age}
-                height={smurf.height}
-                key={smurf.id}
-              />
-            );
-          })}
-        </ul>
-      </div>
-    );
-  }
-}
-
-Smurf.defaultProps = {
- smurfs: [],
+export default props => {
+  return (
+    <div className='Smurfs'>
+      <h1>Smurf Village</h1>
+      <ul>
+        {props.smurfs.map(smurf => {
+          return (
+            <Link
+              to={`/smurf/${smurf.id}`}
+              className='card-link'
+              key={smurf.id}
+            >
+              <div className='Smurf'>
+                <img src={smurf.image} alt={smurf.name} className='smurf-img' />
+                <div className='text-content'>
+                  <h3>{smurf.name}</h3>
+                  <p>
+                    <strong>{smurf.height}cm tall</strong>
+                  </p>
+                  <p>{smurf.age} smurf years old</p>
+                </div>
+              </div>
+            </Link>
+          );
+        })}
+      </ul>
+    </div>
+  );
 };
-
-export default Smurfs;

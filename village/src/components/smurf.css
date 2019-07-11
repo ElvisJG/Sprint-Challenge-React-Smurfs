@@ -1,0 +1,134 @@
+.Smurfs {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.Smurfs h1 {
+  color: #3c68ae;
+  margin: 0 auto;
+}
+
+.Smurf {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  margin-bottom: 1rem;
+}
+
+.Smurf .form-btn {
+  margin: 1rem;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.smurf-img {
+  height: 200px;
+  width: 200px;
+  margin-right: 2rem;
+  border-radius: 50%;
+}
+
+.Smurf h3 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.Smurf p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.SmurfForm {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.smurf-form-input {
+  margin: 1rem 0;
+  height: 50px;
+  line-height: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 2rem;
+  box-sizing: border-box;
+  border: none;
+  background-color: #62cdfd;
+  font-weight: bold;
+  color: white;
+}
+
+input::placeholder {
+  color: rgb(255, 255, 255, 0.5);
+}
+
+.form-btn {
+  line-height: 1.5rem;
+  background: #3c68ae;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  height: 50px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.form-btn-alt {
+  line-height: 1.5rem;
+  background: #3c68ae;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  height: 75px;
+  width: 200px;
+  border-radius: 8px;
+}
+
+.card-link {
+  text-decoration: none;
+  color: #3c68ae;
+}
+
+.Smurf-solo {
+  color: #62cdfd;
+  font-weight: bold;
+}
+
+.Smurf-solo h3 {
+  font-size: 4rem;
+  margin: 0 0 1rem;
+}
+
+.Smurf-solo p {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+.Smurf-solo strong {
+  font-size: 2.5rem;
+  margin: 0 0 1rem;
+}

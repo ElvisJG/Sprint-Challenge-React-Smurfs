@@ -1,24 +1,75 @@
 import React, { Component } from 'react';
+import Axios from 'axios';
+import { Route } from 'react-router-dom';
 
 import './App.css';
+import Nav from './components/Nav/Nav';
 import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
+import Smurf from './components/Smurf';
+import Edit from './components/Edit';
+import logo from './assets/smurfs_logo.png';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      smurfs: [],
+      smurfs: []
     };
   }
   // add any needed code to ensure that the smurfs collection exists on state and it has data coming from the server
   // Notice what your map function is looping over and returning inside of Smurfs.
   // You'll need to make sure you have the right properties on state and pass them down to props.
+
+  componentDidMount() {
+    Axios.get('http://localhost:3333/smurfs')
+      .then(res => {
+        this.setState({
+          smurfs: res.data
+        });
+      })
+      .catch(err => {
+        console.log('Error:', err);
+      });
+  }
+
+  updateSmurfs = smurfs => {
+    this.setState({ smurfs });
+  };
+
   render() {
+    const { smurfs } = this.state;
+
     return (
-      <div className="App">
-        <SmurfForm />
-        <Smurfs smurfs={this.state.smurfs} />
+      <div className='App'>
+        <Nav />
+        <img src={logo} alt='logo' className='logo' />
+
+        <Route
+          exact
+          path='/'
+          render={props => <Smurfs {...props} smurfs={smurfs} />}
+        />
+
+        <Route
+          exact
+          path='/edit/:id'
+          render={props => <Edit {...props} updateSmurfs={this.updateSmurfs} />}
+        />
+
+        <Route
+          exact
+          path='/smurf/:id'
+          render={props => <Smurf {...props} smurfs={smurfs} />}
+        />
+
+        <Route
+          exact
+          path='/smurf-form'
+          render={props => (
+            <SmurfForm {...props} updateSmurfs={this.updateSmurfs} />
+          )}
+        />
       </div>
     );
   }

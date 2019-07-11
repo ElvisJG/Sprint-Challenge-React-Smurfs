@@ -1,0 +1,32 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #62cdfd;
+  margin-bottom: 32px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  line-height: 100px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #62cdfd;
+  font-weight: bold;
+  font-size: 2rem;
+  width: 200px;
+  text-align: center;
+}
+
+.nav-links a:last-of-type {
+  margin-right: 0;
+}
+
+.nav-links a.active {
+  color: white;
+  background: #62cdfd;
+  text-decoration: none;
+}
